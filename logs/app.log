@@ -1,0 +1,223 @@
+{"asctime": "2025-04-09 21:12:51,391", "levelname": "ERROR", "name": "__main__", "message": "Initialization failed: 'Settings' object has no attribute 'get_parser_config'", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 20, in initialize_components\n    file_loader = FileLoader()\n                  ^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\services\\file_loader.py\", line 20, in __init__\n    self.parsers = [HTMLParser(), PDFParser()]\n                    ^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\parsers\\html_parser.py\", line 14, in __init__\n    self._config = settings.get_parser_config(\"html\")\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Settings' object has no attribute 'get_parser_config'"}
+{"asctime": "2025-04-09 21:12:51,394", "levelname": "ERROR", "name": "__main__", "message": "Application error: 'Settings' object has no attribute 'get_parser_config'", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 76, in main\n    file_loader, embedder, knowledge_base, vector_db = initialize_components()\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\main.py\", line 20, in initialize_components\n    file_loader = FileLoader()\n                  ^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\services\\file_loader.py\", line 20, in __init__\n    self.parsers = [HTMLParser(), PDFParser()]\n                    ^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\parsers\\html_parser.py\", line 14, in __init__\n    self._config = settings.get_parser_config(\"html\")\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Settings' object has no attribute 'get_parser_config'"}
+{"asctime": "2025-04-09 21:14:37,299", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:16:20,954", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:16:20,956", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:16:20,959", "levelname": "ERROR", "name": "__main__", "message": "Initialization failed: 1 validation error for Settings\npersist_directory\n  str type expected (type=type_error.str)", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 23, in initialize_components\n    vector_db = VectorDatabase()\n                ^^^^^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\core\\database.py\", line 34, in __init__\n    self.client = chromadb.Client(Settings(\n                                  ^^^^^^^^^\n  File \"C:\\Users\\molod\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pydantic\\v1\\env_settings.py\", line 40, in __init__\n    super().__init__(\n  File \"C:\\Users\\molod\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pydantic\\v1\\main.py\", line 341, in __init__\n    raise validation_error\npydantic.v1.error_wrappers.ValidationError: 1 validation error for Settings\npersist_directory\n  str type expected (type=type_error.str)"}
+{"asctime": "2025-04-09 21:16:20,965", "levelname": "ERROR", "name": "__main__", "message": "Application error: 1 validation error for Settings\npersist_directory\n  str type expected (type=type_error.str)", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 76, in main\n    file_loader, embedder, knowledge_base, vector_db = initialize_components()\n                                                       ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\main.py\", line 23, in initialize_components\n    vector_db = VectorDatabase()\n                ^^^^^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\smart_advisor\\core\\database.py\", line 34, in __init__\n    self.client = chromadb.Client(Settings(\n                                  ^^^^^^^^^\n  File \"C:\\Users\\molod\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pydantic\\v1\\env_settings.py\", line 40, in __init__\n    super().__init__(\n  File \"C:\\Users\\molod\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\pydantic\\v1\\main.py\", line 341, in __init__\n    raise validation_error\npydantic.v1.error_wrappers.ValidationError: 1 validation error for Settings\npersist_directory\n  str type expected (type=type_error.str)"}
+{"asctime": "2025-04-09 21:17:43,677", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:17:44,255", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:17:44,257", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:17:45,576", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:17:47,631", "levelname": "ERROR", "name": "__main__", "message": "Document processing failed: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 60, in process_documents\n    if embeddings and len(embeddings) == len(documents):\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"}
+{"asctime": "2025-04-09 21:17:47,633", "levelname": "ERROR", "name": "__main__", "message": "Application error: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()", "exc_info": "Traceback (most recent call last):\n  File \"F:\\VKR\\pythonProject\\main.py\", line 79, in main\n    documents = process_documents(file_loader, embedder)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\VKR\\pythonProject\\main.py\", line 60, in process_documents\n    if embeddings and len(embeddings) == len(documents):\nValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()"}
+{"asctime": "2025-04-09 21:18:38,082", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:18:38,635", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:18:38,637", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:18:38,932", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:18:39,428", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:18:39,460", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:18:39,461", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:18:39,511", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:18:39,552", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:19:56,099", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:19:56,693", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:19:56,694", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:19:57,036", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:19:57,540", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:19:57,570", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:19:57,570", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:19:57,588", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:19:57,609", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:19:57,634", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:19:57,637", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:19:57,659", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:21:07,113", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:21:07,679", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:21:07,681", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:21:07,976", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:21:08,477", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:21:08,522", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:21:08,523", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:21:08,540", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:21:08,563", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:21:08,581", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:21:08,586", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:21:08,607", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:22:22,232", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:22:22,786", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:22:22,787", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:22:23,108", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:22:23,617", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:22:23,654", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:22:23,654", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:22:23,669", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:22:23,692", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:22:23,709", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:22:23,714", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:22:23,729", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:15,001", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:23:15,614", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:23:15,616", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:23:15,928", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:23:16,455", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:23:16,488", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:23:16,488", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:23:16,505", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:16,531", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:23:16,546", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:16,549", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:23:16,564", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:18,862", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:23:19,435", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:23:19,437", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:23:19,719", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:23:20,213", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:23:20,251", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:23:20,252", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a \u0441\u0434\u0430\u0442\u044c \u0430\u043a\u0430\u0434\u0435\u043c\u0438\u0447\u0435\u0441\u043a\u0443\u044e \u0437\u0430\u0434\u043e\u043b\u0436\u0435\u043d\u043d\u043e\u0441\u0442\u044c?'"}
+{"asctime": "2025-04-09 21:23:20,267", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:20,291", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u041a\u0430\u043a\u0438\u0435 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b \u043d\u0443\u0436\u043d\u044b \u0434\u043b\u044f \u043f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u044f?'"}
+{"asctime": "2025-04-09 21:23:20,306", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:23:20,311", "levelname": "INFO", "name": "__main__", "message": "\nSearching for: '\u0420\u0430\u0437\u043c\u0435\u0440 \u0441\u0442\u0438\u043f\u0435\u043d\u0434\u0438\u0438 \u0434\u043b\u044f \u0441\u0442\u0443\u0434\u0435\u043d\u0442\u043e\u0432'"}
+{"asctime": "2025-04-09 21:23:20,328", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:24:59,071", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Load pretrained SentenceTransformer: all-MiniLM-L6-v2"}
+{"asctime": "2025-04-09 21:24:59,612", "levelname": "INFO", "name": "sentence_transformers.SentenceTransformer", "message": "Use pytorch device: cpu"}
+{"asctime": "2025-04-09 21:24:59,614", "levelname": "INFO", "name": "smart_advisor.core.knowledge", "message": "Knowledge base initialized at knowledge_storage"}
+{"asctime": "2025-04-09 21:24:59,899", "levelname": "INFO", "name": "__main__", "message": "All components initialized successfully"}
+{"asctime": "2025-04-09 21:25:00,402", "levelname": "INFO", "name": "__main__", "message": "Saving documents..."}
+{"asctime": "2025-04-09 21:25:00,438", "levelname": "INFO", "name": "__main__", "message": "Successfully processed 1/1 documents"}
+{"asctime": "2025-04-09 21:27:20,169", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:28:01,649", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:28:08,734", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+{"asctime": "2025-04-09 21:28:18,385", "levelname": "WARNING", "name": "chromadb.segment.impl.vector.local_hnsw", "message": "Number of requested results 5 is greater than number of elements in index 1, updating n_results = 1"}
+2025-04-09 21:37:00,894 [ERROR] __main__: Initialization failed: 'Settings' object has no attribute 'get_parser_config'
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 16, in initialize_components
+    file_loader = FileLoader()
+                  ^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\file_loader.py", line 26, in __init__
+    self.parsers = [HTMLParser(), PDFParser()]
+                    ^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\parsers\html_parser.py", line 14, in __init__
+    self._config = settings.get_parser_config("html")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'get_parser_config'
+2025-04-09 21:37:00,897 [ERROR] __main__: Application error: 'Settings' object has no attribute 'get_parser_config'
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 47, in main
+    file_loader, embedder, vector_db = initialize_components()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\main.py", line 16, in initialize_components
+    file_loader = FileLoader()
+                  ^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\file_loader.py", line 26, in __init__
+    self.parsers = [HTMLParser(), PDFParser()]
+                    ^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\parsers\html_parser.py", line 14, in __init__
+    self._config = settings.get_parser_config("html")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Settings' object has no attribute 'get_parser_config'
+2025-04-09 21:37:52,065 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-04-09 21:39:19,050 [ERROR] __main__: Initialization failed: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 17, in initialize_components
+    embedder = EmbeddingService(settings.EMBEDDING_CONFIG['model_name'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\embedding.py", line 12, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 821, in cached_download
+    http_get(
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 544, in http_get
+    temp_file.write(chunk)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 500, in func_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device
+2025-04-09 21:39:19,077 [ERROR] __main__: Application error: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 47, in main
+    file_loader, embedder, vector_db = initialize_components()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\main.py", line 17, in initialize_components
+    embedder = EmbeddingService(settings.EMBEDDING_CONFIG['model_name'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\embedding.py", line 12, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 821, in cached_download
+    http_get(
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 544, in http_get
+    temp_file.write(chunk)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 500, in func_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device
+2025-04-09 21:54:27,594 [INFO] sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+2025-04-09 21:54:57,515 [ERROR] __main__: Initialization failed: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 17, in initialize_components
+    embedder = EmbeddingService(settings.EMBEDDING_CONFIG['model_name'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\embedding.py", line 12, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 821, in cached_download
+    http_get(
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 544, in http_get
+    temp_file.write(chunk)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 500, in func_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device
+2025-04-09 21:54:57,523 [ERROR] __main__: Application error: [Errno 28] No space left on device
+Traceback (most recent call last):
+  File "F:\VKR\pythonProject\main.py", line 47, in main
+    file_loader, embedder, vector_db = initialize_components()
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\main.py", line 17, in initialize_components
+    embedder = EmbeddingService(settings.EMBEDDING_CONFIG['model_name'])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\VKR\pythonProject\smart_advisor\services\embedding.py", line 12, in __init__
+    self.model = SentenceTransformer(model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\SentenceTransformer.py", line 87, in __init__
+    snapshot_download(model_name_or_path,
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\sentence_transformers\util.py", line 491, in snapshot_download
+    path = cached_download(**cached_download_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\utils\_validators.py", line 118, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 821, in cached_download
+    http_get(
+  File "C:\Users\molod\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\huggingface_hub\file_download.py", line 544, in http_get
+    temp_file.write(chunk)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0\Lib\tempfile.py", line 500, in func_wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device
